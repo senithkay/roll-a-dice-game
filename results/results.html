@@ -17,17 +17,18 @@
     
             <label for="Hometown"> Player 2 name: </label><br>
             <input class="textbox" type="text" id="p2name" name="p2name" placeholder="Insert player 2 name" required><br>
-            <input type="button"  id="btn" value="Start">
+            <input type="button" class="btn" id="btn" value="Start">
         </form>
     </div>
 
     <div class="result">
-        <h3 id="winner">Great!</h3>
+        <h3 id="winner"></h3>
+        <input type="button" id="play-again" class="btn" value="Play Again">
     </div>
     <div class="main-container">
         <div class="player1 player">
-            <h3>Player 1</h3>
-            <div id="total1"></div>
+            <h3 id="p1n">Player 1</h3>
+            <div id="total1" class="total"></div>
             <div class="dice">
                 <img id="dice1p1" src="../images/dice_1.png" alt="">
                 <img id="dice2p1" src="../images/dice_1.png" alt="">
@@ -35,8 +36,8 @@
             <input type="button" id="btn1" value="Roll" class="roll">
         </div>
         <div class="player2 player">
-            <h3>player2</h3>
-            <div id="total2"></div>
+            <h3 id="p2n">player2</h3>
+            <div id="total2" class="total"></div>
             <div class="dice">
                 <img id="dice1p2" src="../images/dice_1.png" alt="">
                 <img id="dice2p2" src="../images/dice_1.png" alt="">
