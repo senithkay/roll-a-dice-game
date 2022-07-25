@@ -29,9 +29,10 @@ let p2_name;
 
 
 main_start.addEventListener("click", function(){
-    //p1_name = document.getElementById("p1name").value;
-    //p2_name = document.getElementById("p2name").value;
+    p1_name = document.getElementById("p1name").value;
+    p2_name = document.getElementById("p2name").value;
     document.querySelector(".main-menu").style.display = "none";
+    cover.style.display = "none";
 },{once: true})
 
 btn1.addEventListener("click", function(){
