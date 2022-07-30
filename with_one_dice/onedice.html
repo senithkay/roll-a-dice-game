@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="onedice.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,26 +27,24 @@
         <h3 id="winner"></h3>
         <input type="button" id="play-again" class="btn" value="Play Again">
     </div>
+    <div class="dice">
+        <img id="dice1" src="../images/dice_1.png" alt="">
+        <img id="dice2" src="../images/dice_1.png" alt="">
+    </div>
+
     <div class="main-container">
         <div class="player1 player">
             <h3 id="p1n">Player 1</h3>
             <div id="total1" class="total"></div>
-            <div class="dice">
-                <img id="dice1p1" src="../images/dice_1.png" alt="">
-                <img id="dice2p1" src="../images/dice_1.png" alt="">
-            </div>
             <input type="button" id="btn1" value="Roll" class="roll">
         </div>
+
         <div class="player2 player">
             <h3 id="p2n">player2</h3>
             <div id="total2" class="total"></div>
-            <div class="dice">
-                <img id="dice1p2" src="../images/dice_1.png" alt="">
-                <img id="dice2p2" src="../images/dice_1.png" alt="">
-            </div>
             <input type="button" id="btn2" value="Roll" class="roll">
         </div>
     </div>
-    <script src="results.js"></script>
+    <script src="onedice.js"></script>
 </body>
 </html>
