@@ -60,10 +60,10 @@ main_start.addEventListener("click", function(){
 btn1.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
     player_res1 += random_number1;
-    dice1.setAttribute("src", "../images/dice_" + random_number1+ ".png");
+    dice1.setAttribute("src", "dice_" + random_number1+ ".png");
 
     random_number2 = Math.floor(Math.random() * 5 + 1);
-    dice2.setAttribute("src", "../images/dice_" + random_number2+ ".png");
+    dice2.setAttribute("src", "dice_" + random_number2+ ".png");
     player_res1 += random_number2;
 
     if(random_number1==random_number2 && random_number1==1)
@@ -89,7 +89,7 @@ btn1.addEventListener("click", function(){
 
     t1.innerHTML = "Total: " + player_res1;
 
-    if(player_res1>=50){
+    if(player_res1>=100){
         cover.style.display = "flex";
         result.style.display = "flex";
         winner.innerHTML = "Great! "+ p1_name +" Won.";
@@ -99,11 +99,11 @@ btn1.addEventListener("click", function(){
 
 btn2.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
-    dice1.setAttribute("src", "../images/dice_" + random_number1+ ".png");
+    dice1.setAttribute("src", "dice_" + random_number1+ ".png");
     player_res2+= random_number1;
 
     random_number2 = Math.floor(Math.random() * 5 + 1);
-    dice2.setAttribute("src", "../images/dice_" + random_number2+ ".png");
+    dice2.setAttribute("src", "dice_" + random_number2+ ".png");
     player_res2+= random_number2;
 
     if(random_number1==random_number2 && random_number1==1)
@@ -130,10 +130,11 @@ btn2.addEventListener("click", function(){
 
     t2.innerHTML = player_res2 + " :Total";
 
-    if(player_res2>=50){
+    if(player_res2>=100){
         cover.style.display = "flex";
         result.style.display = "flex";
         winner.innerHTML = "Great! "+ p2_name +" Won.";
     }
+
 });
 
