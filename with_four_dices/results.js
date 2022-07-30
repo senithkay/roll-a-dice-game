@@ -62,10 +62,10 @@ main_start.addEventListener("click", function(){
 btn1.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
     player_res1 += random_number1;
-    dice1p1.setAttribute("src", "../images/dice_" + random_number1+ ".png");
+    dice1p1.setAttribute("src", "dice_" + random_number1+ ".png");
 
     random_number2 = Math.floor(Math.random() * 5 + 1);
-    dice2p1.setAttribute("src", "../images/dice_" + random_number2+ ".png");
+    dice2p1.setAttribute("src", "dice_" + random_number2+ ".png");
     player_res1 += random_number2;
 
     if(random_number1==random_number2 && random_number1==1)
@@ -101,11 +101,11 @@ btn1.addEventListener("click", function(){
 
 btn2.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
-    dice1p2.setAttribute("src", "../images/dice_" + random_number1+ ".png");
+    dice1p2.setAttribute("src", "dice_" + random_number1+ ".png");
     player_res2+= random_number1;
 
     random_number2 = Math.floor(Math.random() * 5 + 1);
-    dice2p2.setAttribute("src", "../images/dice_" + random_number2+ ".png");
+    dice2p2.setAttribute("src", "dice_" + random_number2+ ".png");
     player_res2+= random_number2;
 
     if(random_number1==random_number2 && random_number1==1)
