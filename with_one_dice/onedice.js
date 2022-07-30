@@ -42,6 +42,82 @@ play_again.addEventListener("click", function(){
     result.style.display = "none";
 })
 
+//profile pictures
+let dp1 = document.querySelector(".dp1");
+let dp2 = document.querySelector(".dp2");
+
+//player 1 profile picture selection
+let p1p1 = document.querySelector("#p1p1");
+let p1p2 = document.querySelector("#p1p2");
+let p1p3 = document.querySelector("#p1p3");
+let p1p4 = document.querySelector("#p1p4");
+
+
+let pic_selector1 = document.querySelector(".pic-selector1");
+let ppic1 = document.querySelector(".ppic1");
+
+p1p1.addEventListener("click", function(){
+    ppic1.setAttribute("src", "m1.jpeg")
+    pic_selector1.style.display = "none";
+});
+
+
+p1p2.addEventListener("click", function(){
+    ppic1.setAttribute("src", "m2.jpeg")
+    pic_selector1.style.display = "none";
+});
+
+p1p3.addEventListener("click", function(){
+    ppic1.setAttribute("src", "f1.jpeg")
+    pic_selector1.style.display = "none";
+});
+
+p1p4.addEventListener("click", function(){
+    ppic1.setAttribute("src", "f2.jpeg")
+    pic_selector1.style.display = "none";
+});
+
+//player 2 profile picture selection
+
+let p2p1 = document.querySelector("#p2p1");
+let p2p2 = document.querySelector("#p2p2");
+let p2p3 = document.querySelector("#p2p3");
+let p2p4 = document.querySelector("#p2p4");
+
+
+let pic_selector2 = document.querySelector(".pic-selector2");
+let ppic2 = document.querySelector(".ppic2");
+
+p2p1.addEventListener("click", function(){
+    ppic2.setAttribute("src", "m1.jpeg")
+    cover.style.display = "none";
+    pic_selector2.style.display = "none";
+});
+
+
+p2p2.addEventListener("click", function(){
+    ppic2.setAttribute("src", "m2.jpeg")
+    cover.style.display = "none";
+    pic_selector2.style.display = "none";
+});
+
+p2p3.addEventListener("click", function(){
+    ppic2.setAttribute("src", "f1.jpeg")
+    cover.style.display = "none";
+    pic_selector2.style.display = "none";
+});
+
+p2p4.addEventListener("click", function(){
+    ppic2.setAttribute("src", "f2.jpeg")
+    cover.style.display = "none";
+    pic_selector2.style.display = "none";
+});
+
+
+
+
+
+
 
 main_start.addEventListener("click", function(){
     p1_name = document.getElementById("p1name").value;
@@ -54,13 +130,14 @@ main_start.addEventListener("click", function(){
     document.getElementById("p1n").innerHTML = p1_name;
     document.getElementById("p2n").innerHTML = p2_name;
     document.querySelector(".main-menu").style.display = "none";
-    cover.style.display = "none";
+    
 },{once: true})
 
 btn1.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
     player_res1 += random_number1;
     dice1.setAttribute("src", "dice_" + random_number1+ ".png");
+
 
     random_number2 = Math.floor(Math.random() * 5 + 1);
     dice2.setAttribute("src", "dice_" + random_number2+ ".png");
@@ -84,7 +161,14 @@ btn1.addEventListener("click", function(){
         t1.style.color = "#E86118";
         document.getElementById("p2n").style.color = "white";
         t2.style.color = "white";
-
+        dp2.style.border = "4px #E86118 solid";
+        dp1.style.border = "0px";
+        dp2.style.width = "130px";
+        dp2.style.height = "130px";
+        dp1.style.width = "100px";
+        dp1.style.height = "100px";
+        dp2.style.animationName = "dp";
+        dp1.style.animationName = "";
     }
 
     t1.innerHTML = "Total: " + player_res1;
@@ -125,6 +209,15 @@ btn2.addEventListener("click", function(){
         t2.style.color = "#E86118";
         document.getElementById("p1n").style.color = "white";
         t1.style.color = "white";
+
+        dp1.style.border = "4px #E86118 solid";
+        dp2.style.border = "0px";
+        dp1.style.width = "130px";
+        dp1.style.height = "130px";
+        dp2.style.width = "100px";
+        dp2.style.height = "100px";
+        dp1.style.animationName = "dp";
+        dp2.style.animationName = "";
 
     }
 
