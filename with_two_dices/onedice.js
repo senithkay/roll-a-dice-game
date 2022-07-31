@@ -147,24 +147,33 @@ btn1.addEventListener("click", function(){
     if(random_number1==random_number2 && random_number1==1)
         player_res1 = 0;
     
-    
+    document.querySelector(".dice").style.animationName = "rotator";
+
+    //checking player swapping conditions
     if(random_number1!=random_number2 || random_number1==1 ){
+        //disabling the button before activating the other player button
         btn1.setAttribute("disabled", "");
         btn1.style.backgroundImage = "linear-gradient(to right, #ADADAD, #B8B8B8)";
 
+        //activating the next player button
         btn2.removeAttribute("disabled");
         btn2.style.backgroundImage = "linear-gradient(to right, #E86118, #F2A614)";
 
+        //swapping background colour
         player1.style.backgroundColor = "white";
         player2.style.backgroundColor = "#E86118";
 
+        //swapping the dice rotator(top left and right)
         document.getElementById("bdice1").style.animationName = "";
         document.getElementById("bdice2").style.animationName = "rotator";
 
+        //changing text colours
         document.getElementById("p1n").style.color = "#E86118";
         t1.style.color = "#E86118";
         document.getElementById("p2n").style.color = "white";
         t2.style.color = "white";
+
+        //swapping css of players profile pictures
         dp2.style.border = "4px #E86118 solid";
         dp1.style.border = "0px";
         dp2.style.width = "130px";
@@ -173,10 +182,14 @@ btn1.addEventListener("click", function(){
         dp1.style.height = "100px";
         dp2.style.animationName = "dp";
         dp1.style.animationName = "";
-    }
 
+        document.querySelector(".dice").style.animationName = "rotator2";
+    }
+    //updating total
     t1.innerHTML = "Total: " + player_res1;
 
+
+    //checking winning conditions
     if(player_res1>=100){
         cover.style.display = "flex";
         result.style.display = "flex";
@@ -198,27 +211,34 @@ btn2.addEventListener("click", function(){
     if(random_number1==random_number2 && random_number1==1)
         player_res2 = 0;
     
-    
-    
+    document.querySelector(".dice").style.animationName = "rotator2";
+
+    //checking player swapping conditions
     if(random_number1!=random_number2 || random_number1==1 ){
+
+        //disabling the button before activating the other player button
         btn2.setAttribute("disabled", "");
         btn2.style.backgroundImage = "linear-gradient(to right, #ADADAD, #B8B8B8)";
 
+        //activating the next player button
         btn1.removeAttribute("disabled");
         btn1.style.backgroundImage = "linear-gradient(to right, #E86118, #F2A614)";
 
-
+        //swapping background colour
         player2.style.backgroundColor = "white";
         player1.style.backgroundColor = "#E86118";
 
+        //changing text colours
         document.getElementById("p2n").style.color = "#E86118";
         t2.style.color = "#E86118";
         document.getElementById("p1n").style.color = "white";
         t1.style.color = "white";
 
+        //swapping the dice rotator(top left and right)
         document.getElementById("bdice2").style.animationName = "";
         document.getElementById("bdice1").style.animationName = "rotator";
 
+        //swapping css of players profile pictures
         dp1.style.border = "4px #E86118 solid";
         dp2.style.border = "0px";
         dp1.style.width = "130px";
@@ -228,10 +248,14 @@ btn2.addEventListener("click", function(){
         dp1.style.animationName = "dp";
         dp2.style.animationName = "";
 
+        document.querySelector(".dice").style.animationName = "rotator";
+
     }
 
+    //updating total
     t2.innerHTML = player_res2 + " :Total";
 
+    //checking winning conditions
     if(player_res2>=100){
         cover.style.display = "flex";
         result.style.display = "flex";
