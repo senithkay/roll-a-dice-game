@@ -1,3 +1,4 @@
+//element selectors
 let btn1 = document.querySelector("#btn1");
 let btn2 = document.querySelector("#btn2");
 let random_number1;
@@ -31,16 +32,8 @@ let play_again = document.getElementById("play-again");
 let player1 = document.querySelector(".player1");
 let player2 = document.querySelector(".player2");
 
-play_again.addEventListener("click", function(){
-    player_res1= 0;
-    player_res2 = 0;
 
-    t1.innerHTML = "Total: " + player_res1;
-    t2.innerHTML = "Total: " + player_res2;
 
-    cover.style.display = "none";
-    result.style.display = "none";
-})
 
 //profile pictures
 let dp1 = document.querySelector(".dp1");
@@ -77,6 +70,8 @@ p1p4.addEventListener("click", function(){
     pic_selector1.style.display = "none";
 });
 
+
+
 //player 2 profile picture selection
 
 let p2p1 = document.querySelector("#p2p1");
@@ -92,6 +87,7 @@ p2p1.addEventListener("click", function(){
     ppic2.setAttribute("src", "m1.jpeg")
     cover.style.display = "none";
     pic_selector2.style.display = "none";
+    document.getElementById("bdice1").style.animationName = "rotator";
 });
 
 
@@ -99,18 +95,21 @@ p2p2.addEventListener("click", function(){
     ppic2.setAttribute("src", "m2.jpeg")
     cover.style.display = "none";
     pic_selector2.style.display = "none";
+    document.getElementById("bdice1").style.animationName = "rotator";
 });
 
 p2p3.addEventListener("click", function(){
     ppic2.setAttribute("src", "f1.jpeg")
     cover.style.display = "none";
     pic_selector2.style.display = "none";
+    document.getElementById("bdice1").style.animationName = "rotator";
 });
 
 p2p4.addEventListener("click", function(){
     ppic2.setAttribute("src", "f2.jpeg")
     cover.style.display = "none";
     pic_selector2.style.display = "none";
+    document.getElementById("bdice1").style.animationName = "rotator";
 });
 
 
@@ -118,7 +117,7 @@ p2p4.addEventListener("click", function(){
 
 
 
-
+//main menu(form) functions
 main_start.addEventListener("click", function(){
     p1_name = document.getElementById("p1name").value;
     p2_name = document.getElementById("p2name").value;
@@ -133,6 +132,8 @@ main_start.addEventListener("click", function(){
     
 },{once: true})
 
+
+//player one roll button
 btn1.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
     player_res1 += random_number1;
@@ -156,6 +157,9 @@ btn1.addEventListener("click", function(){
 
         player1.style.backgroundColor = "white";
         player2.style.backgroundColor = "#E86118";
+
+        document.getElementById("bdice1").style.animationName = "";
+        document.getElementById("bdice2").style.animationName = "rotator";
 
         document.getElementById("p1n").style.color = "#E86118";
         t1.style.color = "#E86118";
@@ -181,6 +185,7 @@ btn1.addEventListener("click", function(){
 });
 
 
+//player two roll button
 btn2.addEventListener("click", function(){
     random_number1 = Math.floor(Math.random() * 5 + 1);
     dice1.setAttribute("src", "dice_" + random_number1+ ".png");
@@ -202,6 +207,7 @@ btn2.addEventListener("click", function(){
         btn1.removeAttribute("disabled");
         btn1.style.backgroundImage = "linear-gradient(to right, #E86118, #F2A614)";
 
+
         player2.style.backgroundColor = "white";
         player1.style.backgroundColor = "#E86118";
 
@@ -209,6 +215,9 @@ btn2.addEventListener("click", function(){
         t2.style.color = "#E86118";
         document.getElementById("p1n").style.color = "white";
         t1.style.color = "white";
+
+        document.getElementById("bdice2").style.animationName = "";
+        document.getElementById("bdice1").style.animationName = "rotator";
 
         dp1.style.border = "4px #E86118 solid";
         dp2.style.border = "0px";
@@ -231,3 +240,16 @@ btn2.addEventListener("click", function(){
 
 });
 
+
+
+//play again button
+play_again.addEventListener("click", function(){
+    player_res1= 0;
+    player_res2 = 0;
+
+    t1.innerHTML = "Total: " + player_res1;
+    t2.innerHTML = "Total: " + player_res2;
+
+    cover.style.display = "none";
+    result.style.display = "none";
+})
